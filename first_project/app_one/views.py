@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 
 
 def index(request):
@@ -10,16 +10,16 @@ def new(request):
 
 
 def create(request):
-    return HttpResponse("Idk what to do here")
+    return redirect('/')
 
 
 def show(request, number):
-    return HttpResponse("placeholder to display blog number: {number}")
+    return HttpResponse(f"placeholder to display blog number: {number}")
 
 
 def edit(request, number):
-    return HttpResponse("placeholder to edit blog {number}")
+    return HttpResponse(f"placeholder to edit blog {number}")
 
 
 def destroy(request, number):
-    return HttpResponse("Idk what to do here either")
+    return redirect('/')
